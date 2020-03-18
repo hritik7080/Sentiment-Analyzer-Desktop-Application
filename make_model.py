@@ -10,7 +10,7 @@ from nltk.stem import WordNetLemmatizer
 from keras.utils.np_utils import to_categorical
 
 # %%
-yelp = pd.read_csv('C:\\Users\\lilan\\Downloads\\train.csv', encoding='ISO-8859-1')
+yelp = pd.read_csv('./train.csv', encoding='ISO-8859-1')
 yelp['SentimentText'] = yelp['SentimentText'].apply(lambda x: x.lower())
 lm=WordNetLemmatizer()
 yelp['SentimentText'] = yelp['SentimentText'].apply(lambda x: lm.lemmatize(x))
